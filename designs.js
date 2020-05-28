@@ -13,12 +13,14 @@ from.addEventListener('submit', function(event) {
     makeGrid();
 });
 
+// changing cell color on click
 pixelCanvas.addEventListener('click', function(event) {
     if (event.target.nodeName === 'TD') {
         event.target.style.backgroundColor = colorPicker.value;
     }
 })
 
+// Create table using neasted loop on user input
 function makeGrid() {
 for (let i = 0; i < rowsNumber.value; i++) {
     const row = pixelCanvas.insertRow(0);
